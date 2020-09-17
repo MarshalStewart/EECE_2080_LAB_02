@@ -78,8 +78,10 @@ int ArrayBasedStack::peek()
 std::string ArrayBasedStack::toString()
 {
 	std::string str = "";
+	if (isEmpty())
+		return str;
 
-	for (int i = 0; i < MAX_STACK_LEN; i++)
+	for (int i = 0; i < topIndex + 1; i++)
 	{
 		if (stack[i] >= 0)
 			str += std::to_string(stack[i]);
@@ -101,17 +103,22 @@ ArrayBasedQueue::~ArrayBasedQueue() {}
 
 bool ArrayBasedQueue::isEmpty() const
 {
-		return false;
+	return frontIndex == backIndex;
 }
 
 bool ArrayBasedQueue::isFull() const {
+	if (backIndex - frontIndex == MAX_QUEUE_LEN)
+		return true;
+	else if (frontIndex - backIndex == MAX_QUEUE_LEN)
+		return true;
 
+	return false;
 }
 
 bool ArrayBasedQueue::enQueue(std::string val) {
 	if(!isFull()) {
 		queue[backIndex] = val;
-		backIndex = (backIndex++) % MAX_QUEUE_LEN;
+		backIndex = (++backIndex) % MAX_QUEUE_LEN;
 		return true;
 	}
 	else{
@@ -123,7 +130,7 @@ bool ArrayBasedQueue::enQueue(std::string val) {
 bool ArrayBasedQueue::deQueue() {
 	if(!isEmpty()) {
 		queue[frontIndex] = "";
-		frontIndex = (frontIndex++) % MAX_QUEUE_LEN;
+		frontIndex = (++frontIndex) % MAX_QUEUE_LEN;
 		return true;
 	}
 	else{
@@ -140,5 +147,6 @@ std::string ArrayBasedQueue::peekFront() {
 	else
 	{
 		//TODO
+		return queue[frontIndex];
 	}
 }

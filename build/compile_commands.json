@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/mstewart/EECE_2080/EECE_2080_LAB_02/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -g   -o CMakeFiles/runMain.dir/main.cpp.o -c /home/mstewart/EECE_2080/EECE_2080_LAB_02/main.cpp",
+  "file": "/home/mstewart/EECE_2080/EECE_2080_LAB_02/main.cpp"
+},
+{
+  "directory": "/home/mstewart/EECE_2080/EECE_2080_LAB_02/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -g   -o CMakeFiles/runTests.dir/tests.cpp.o -c /home/mstewart/EECE_2080/EECE_2080_LAB_02/tests.cpp",
+  "file": "/home/mstewart/EECE_2080/EECE_2080_LAB_02/tests.cpp"
+},
+{
+  "directory": "/home/mstewart/EECE_2080/EECE_2080_LAB_02/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -g   -o CMakeFiles/applibrary.dir/StackQueue.cpp.o -c /home/mstewart/EECE_2080/EECE_2080_LAB_02/StackQueue.cpp",
+  "file": "/home/mstewart/EECE_2080/EECE_2080_LAB_02/StackQueue.cpp"
+}
+]

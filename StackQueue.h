@@ -1,8 +1,8 @@
 #include <string>
 #include <stdlib.h>
 
-#define MAX_STACK_LEN 10 
-#define MAX_QUEUE_LEN 10 
+#define MAX_STACK_LEN 5 
+#define MAX_QUEUE_LEN 50 
 #define EMPTY_SLOT -1
 
 class IStack {
