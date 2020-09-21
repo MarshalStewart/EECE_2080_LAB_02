@@ -121,12 +121,15 @@ public:
 			cout << "Congrats, you won!!!" << endl;
 			setGameEnded(true);
 			int count = 1;
+			FILE *fd = fopen("output.txt", "w+");
 			while (!moves.isEmpty())
 			{
 				printf("%d: %s\n", count, moves.peekFront().c_str());
+				fprintf(fd, "%d: %s\n", count, moves.peekFront().c_str());
 				moves.deQueue();
 				count++;
 			}
+			fclose(fd);
 			exit(0);
 		}
 
